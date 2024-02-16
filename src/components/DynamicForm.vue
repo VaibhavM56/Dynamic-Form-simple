@@ -7,6 +7,11 @@
         :label="field.label"
       />
     </q-card>
+  </div>
+
+  <br />
+  <br />
+  <div>
     <q-card class="form-container" @drop="dropField" @dragover.prevent>
       <q-input
         outlined
@@ -15,7 +20,11 @@
         :placeholder="field.label"
         :class="{ 'invalid-input': field.error }"
         v-model="field.value"
-      />
+      >
+        <template v-slot:after>
+          <q-btn round dense flat icon="delete" @click="removeField()" />
+        </template>
+      </q-input>
     </q-card>
   </div>
 </template>
@@ -46,6 +55,9 @@ export default {
         this.formFields.push({ label, value: "", error: "" });
       }
     },
+    removeField(index) {
+      this.formFields.splice(index, 1);
+    },
   },
 };
 </script>
@@ -53,19 +65,21 @@ export default {
 <style>
 .form-builder {
   display: flex;
+  justify-content: space-around;
 }
 
 .draggable-container {
-  width: 200px;
+  width: 300px;
 }
 
 .form-container {
   flex: 1;
-  padding: 20px;
+  padding: 80px;
   border: 1px dashed #ccc;
 }
 
 .invalid-input {
   border: 1px solid red;
+  padding: 10px;
 }
 </style>

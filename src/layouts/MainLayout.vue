@@ -82,6 +82,12 @@ const linksList = [
   //   icon: "favorite",
   //   link: "https://awesome.quasar.dev",
   // },
+  {
+    title: " Form",
+    caption: "leads to form",
+    icon: "form",
+    link: "#/form",
+  },
 ];
 
 export default defineComponent({
