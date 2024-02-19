@@ -69,10 +69,14 @@ export default {
 }
 
 .draggable-container {
-  width: 300px;
+  width: 250px;
+  margin: 10px 35px 10px 10px;
+  padding: 10px;
 }
 
 .form-container {
+  width: 400px;
+  height: 400px;
   flex: 1;
   padding: 80px;
   border: 1px dashed #ccc;
