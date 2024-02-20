@@ -75,11 +75,14 @@ export default {
 }
 
 .form-container {
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  height: 40%;
   flex: 1;
   padding: 80px;
-  border: 1px dashed #ccc;
+  border: 1px #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .invalid-input {
