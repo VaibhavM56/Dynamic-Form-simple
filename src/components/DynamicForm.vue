@@ -22,7 +22,7 @@
         v-model="field.value"
       >
         <template v-slot:after>
-          <q-btn round dense flat icon="delete" @click="removeField()" />
+          <q-btn round dense flat icon="delete" @click="removeField(index)" />
         </template>
       </q-input>
     </q-card>
@@ -82,7 +82,7 @@ export default {
   border: 1px #ccc;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .invalid-input {
